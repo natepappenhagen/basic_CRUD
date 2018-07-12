@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tall Ones</title>
+</head>
+<body>
+	
+	<h1>Tall Ones Index Page</h1>
+	
+	<ul>
+		<% for(let i = 0; i < tallOnes.length; i++) { %>
+			<a href="/TallOnes/<%=i%>"><h2><%= tallOnes[i].name %></h2></a>
+			<form method="POST" action="/TallOnes/<%=i%>?_method=DELETE">
+				<input type="submit" value="DELETE">
+			</form>
+			<br/>
+			<a href="/TallOnes/<%=i%>/edit">Edit</a>
+		<% } %>
+	</ul>
+</body>
+</html>

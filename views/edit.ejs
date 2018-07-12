@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit Tall Ones Page</h1>
+
+	<form method="POST" action="/TallOnes/<%= index %>?_method=PUT">
+		Name: <input type="text" name="name" value="<%= tallOnes.name %>">
+		Height: <input type="text" name="height" value="<%= tallOnes.height %>">
+		Location: <input type="text" name="location" value="<%= tallOnes.location %>">
+		First_Ascent: <input type="text" name="First_Ascent" value="<%= tallOnes.First_Ascent %>">
+		<br/>
+		<input type="submit" value="Submit Changes">
+	</form>
+	<br/>
+	<form method="POST" action="/TallOnes/<%=index%>?_method=DELETE">
+		<input type="submit" value="DELETE">
+	</form>
+</body>
+</html>
